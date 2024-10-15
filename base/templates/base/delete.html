@@ -1,0 +1,14 @@
+<!--Dynamic template for deleting elements-->
+
+{% extends 'main.html' %}
+
+{% block content %}
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{object}}"</p>
+    <a href="{{request.META.HTTP_REFERER}}">Return</a>
+    <input type="submit" value="Confirm">
+</form>
+
+{% endblock content %}
