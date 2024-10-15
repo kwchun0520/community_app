@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{%  block content %}
+
+<div>
+    <form method="POST" action="">
+        {% csrf_token %} <!--make sure the requests is not from some suspicious applications-->
+        {{form.as_p}} <!--as_p convert every element into <p></p>-->
+        <input type="submit" value="Submit">
+        <input type="return" value="Return">
+    </form>
+
+</div>
+
+{% endblock content %}
+
